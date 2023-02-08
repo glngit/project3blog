@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{%extends 'checkapp/base.html'%}
+{%block title%}web blog{%endblock%}
+{%block content%}
+  <h1>Companies Blog</h1>
+  <br>
+  {%if tag%}
+  <h2 id='t'>posts tagged with '{{tag.name}}'</h2>
+  {%endif%}<br><br>
+  {% if p%}
+  <table>
+    <thead>
+      <th>Companey</th>
+      <th>Title</th>
+      <th>Eligibility</th>
+      <th>Adress</th>
+      <th>Gmail</th>
+      <th>Phone Number</th>
+    </thead>
+    {%endif%}
+    {% for post in p%}
+    <tr>
+      <td><h4><a href="{{post.get_absolute_url}}" class="btn-primary" style='background-color:yellow; color:green;'>{{post.companey}}</a></h4>
+        <p>Tags:
+        {%for tag in post.tags.all%}
+        <a href="{%url 'post_list_by_tag_name' tag.slug%}" class='btn-primary' style="background-color:#8d8899; color:white;">{{tag.name}}</a>
+        {%endfor%}
+        </p>
+      </td>
+      <td>{{post.title}}</td>
+      <td>{{post.eligibility}}</td>
+      <td>{{post.address}}</td>
+      <td>{{post.email}}</td>
+      <td>{{post.phonenumber}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+  {%include 'checkapp/pagination.html' with page=p%}
+{%endblock%}

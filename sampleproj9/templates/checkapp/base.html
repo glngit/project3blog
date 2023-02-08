@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{%load static%}
+<html lang="en" dir="ltr">
+ <head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bo
+otstrap.min.css" integrity="sha384-
+BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossori
+gin="anonymous">
+<link rel="stylesheet" href="{%static 'css/blog.css'%}">
+ <title></title>
+ </head>
+ <body>
+ <div class="contant">
+ {%block content%}
+ {%endblock%}
+ </div>
+ <div class="sidebar">
+ <h2>Posts Info</h2>
+ <p style="color:#9ca106;">Total number of published posts upto today:<span id='c'>{%total_posts%}</span></p>
+ <h3>Latest Posts:</h3><span style="color:white;">{%showlatestposts 6%}</span>
+ </div>
+ </body>
+</html>

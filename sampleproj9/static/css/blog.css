@@ -1,0 +1,41 @@
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #dddddd;
+  color:blue;
+}
+.contant{
+  float:left;
+  width:75%;
+  padding:0 20px 20px 20px;
+  background: #f2ecda;
+  border-radius:40px;
+}
+.sidebar{
+  float:right;
+  width:25%;
+  padding:10px;
+  background:blue;
+  height:100%;
+  color:red;
+  border-radius:25px;
+}
+#t{
+  color:blue;
+}
+.com{
+  color:#878c94;
+}
+#c{
+  font-size: 25px;
+  color:white;
