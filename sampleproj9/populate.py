@@ -10,6 +10,11 @@ from random import *
 fake=Faker()
 #add
 
+
+#add second in new1 branch
+
+
+
 def phonenumbergen():
     d1=randint(6,9)
     num=''+str(d1)
