@@ -8,6 +8,7 @@ from checkapp.models import *
 from faker import Faker
 from random import *
 fake=Faker()
+#add
 
 def phonenumbergen():
     d1=randint(6,9)
